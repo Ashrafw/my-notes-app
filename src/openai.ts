@@ -23,7 +23,7 @@ export async function generateImagePrompt(name: string) {
         },
         {
           role: "user",
-          content: `please generate a thumbnail description for my notebook titles: ${name}, don't add any text to the image, make simple and as an icon. use more than two colors.`,
+          content: `please generate a thumbnail description for my notebook titles: ${name}, don't add any text to the image. use more than two colors.`,
         },
       ],
     });
