@@ -14,6 +14,7 @@ export async function POST(req: Request) {
 
   const body = await req.json();
   const { name } = body;
+
   const image_description = await generateImagePrompt(name);
   if (!image_description) {
     return new NextResponse("failed to generate image description", {
@@ -27,7 +28,6 @@ export async function POST(req: Request) {
       status: 500,
     });
   }
-
   const notes_ids = await db
     .insert($notes)
     .values({

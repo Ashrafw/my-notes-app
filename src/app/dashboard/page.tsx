@@ -15,7 +15,6 @@ type Props = {};
 const DashboardPage = async (props: Props) => {
   const { userId } = auth();
   const notes = await db.select().from($notes).where(eq($notes.userId, userId!));
-  console.log("notes", notes);
   return (
     <>
       <div className="grainy min-h-screen">

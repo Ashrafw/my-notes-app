@@ -20,8 +20,6 @@ const app = initializeApp(firebaseConfig);
 export const storage = getStorage(app, "gs://mynotes-78541.appspot.com");
 
 export async function uploadFileToFirebase(image_url: string, name: string) {
-  console.log("name", name);
-  console.log("image_url", image_url);
   try {
     const response = await fetch(image_url);
     const buffer = await response.arrayBuffer();

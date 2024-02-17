@@ -7,10 +7,7 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const { noteId } = await req.json();
-    console.log("noteId", noteId);
-    console.log("noteId", noteId);
-    console.log("noteId", noteId);
-    console.log("noteId", noteId);
+
     const notes = await db
       .select()
       .from($notes)
@@ -24,7 +21,6 @@ export async function POST(req: Request) {
       notes[0].imageUrl,
       notes[0].name
     )) as string;
-    console.log("firebase_url", firebase_url);
 
     if (!firebase_url) throw new Error("no firebase-url");
 
