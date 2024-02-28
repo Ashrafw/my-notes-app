@@ -31,8 +31,8 @@ export async function POST(req: Request) {
   const notes_ids = await db
     .insert($notes)
     .values({
-      name,
       userId,
+      name,
       imageUrl: image_url,
     })
     .returning({ insertedId: $notes.id });

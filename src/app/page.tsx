@@ -12,6 +12,11 @@ export default function Home() {
         </h1>
         <div className="mt-4"></div>
         <h2 className="font-semibold text-3xl text-center text-slate-700">
+          Say goodbye to writers block!!!
+        </h2>
+        <div className="mt-4"></div>
+
+        <h2 className="font-semibold text-2xl text-center text-slate-700">
           <TypewriterTitle />
         </h2>
         <div className="mt-8"></div>
